@@ -1,0 +1,70 @@
+.ac,.ac:hover{
+    color: black;
+    background-color: rgb(255, 184, 30);
+}
+
+.ac:active{
+    background-color: rgb(255, 83, 30);
+    color: white;
+}
+
+.btnTxt{
+    font-size: 13px;
+    padding: 1px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cellBody{
+    width: 20vw;
+}
+
+#display{
+    color: black;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: none;
+    transform: none;
+    text-align:right;
+    font-size: 20px;
+    height: 70px;
+}
+
+table, tr, td{
+    border: 1.5px solid black;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0 3px #666;
+}
+
+table{
+    border: 5px solid black;
+    border-spacing: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+td{
+    border-radius: 5px;
+    height: 8vh;
+    
+}
+
+td:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(3px);
+}
+
+td:hover{
+    background-color: rgb(85, 84, 84);
+}
+
+tr{
+    box-shadow: none;
+}
