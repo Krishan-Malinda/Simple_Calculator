@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ac,.ac:hover{
+            color: black;
+            background-color: rgb(255, 184, 30);
+        }
+
+        .ac:active{
+            background-color: rgb(255, 83, 30);
+            color: white;
+        }
+
+        .btnTxt{
+            font-size: 13px;
+            padding: 1px;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cellBody{
+            width: 20vw;
+        }
+
+        #display{
+            color: black;
+            background-color: rgb(170, 170, 170);
+            border-radius: 5px 5px 0px 0px;
+            box-shadow: none;
+            transform: none;
+            text-align:right;
+            font-size: 20px;
+            height: 70px;
+        }
+        
+        table{
+            border-spacing: 10px;
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        table, tr, td{
+            border: 2px solid black;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            background-color: rgb(43, 43, 43);
+            box-shadow: 0 3px #666;
+        }
+        
+        td{
+            border-radius: 5px;
+            height: 8vh;
+            
+        }
+
+        td:active{
+            box-shadow: 0 1px #666;
+            transform: translateY(3px);
+        }
+
+        td:hover{
+            background-color: rgb(85, 84, 84);
+        }
+
+        tr{
+            box-shadow: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cellBody">
+        <table>
+            <tr>
+                <td colspan="4" id="display">ghj</td>
+            </tr>
+            <tr>
+                <td class="ac btnTxt">AC</td>
+                <td>/</td>
+                <td>*</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td rowspan="2">+</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td rowspan="2" class="btnTxt">Enter</td>
+            </tr>
+            <tr>
+                <td colspan="2">0</td>
+                <td>.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
