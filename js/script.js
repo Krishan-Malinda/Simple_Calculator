@@ -1,65 +1,36 @@
-/* var numbers = document.getElementsByClassName('num');
-var operators = document.getElementsByClassName('opr');
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const display = document.getElementById('display');
+    const acBtn = document.getElementById('acBtn');
+    const numBtns = document.querySelectorAll('.num');
+    const oprBtns = document.querySelectorAll('.opr');
+    const equalBtn = document.getElementById('equal');
 
-var num = new Array(2);
-
-var opr='';
-
-for (var i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", function() {
-        num[i] = this.getAttribute("value");
-        alert(num[i]);
-        document.getElementById("display").innerHTML=value;
-    });
-}
- */
-
-
-function outerFunction() {
-    const outerVariable = "I'm from outer function";
-    /* function innerFunction() {
-        console.log(outerVariable); // Accessing outerVariable from inner function
-    } */
-    return innerFunction;
-}
-
-const innerFunc = outerFunction();
-innerFunc(); // Outputs: I'm from outer function
-
-
-
-
-
-
-
-
-/*  document.addEventListener("DOMContentLoaded", function() {
-    var numElements = document.getElementsByClassName("num");
-     for (var i = 0; i < numElements.length; i++) {
-        numElements[i].addEventListener("click", function() {
-            var value = this.getAttribute("value");
-            document.getElementById("display").innerHTML=value;
-        });
-    }  
-});
-
-document.getElementById('acBtn').onclick = function(){
-    document.getElementById("display").innerHTML='';
-} */
-
-
-/* for (var i = 0; i < numElements.length; i++) {
-    numElements[i].addEventListener("click", function() {
-        var value = this.getAttribute("value");
-        document.getElementById("display").innerHTML=value;
-    });
-} */
-/* document.addEventListener("DOMContentLoaded", function() {
-    var numElements = document.getElementsByClassName("num");
-    for (var i = 0; i < numElements.length; i++) {
-        numElements[i].addEventListener("click", function() {
-            var x = this.getAttribute("value");
-            document.getElementById("display").innerHTML= x;
-        });
+    function clearDisplay() {
+        display.textContent = '';
     }
-}); */
+
+    function calculate() {
+        try {
+            display.textContent = eval(display.textContent);
+        } catch (error) {
+            display.textContent = 'Error';
+        }
+    }
+
+    numBtns.forEach(function(button) {
+        button.addEventListener('click', function() {
+            display.textContent += button.textContent;
+        });
+    });
+
+    oprBtns.forEach(function(button) {
+        button.addEventListener('click', function() {
+            display.textContent += button.textContent;
+        });
+    });
+
+    acBtn.addEventListener('click', clearDisplay);
+
+    equalBtn.addEventListener('click', calculate);
+});
